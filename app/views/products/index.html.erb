@@ -1,0 +1,13 @@
+<%# Parte de html %>
+<h1>Products:</h1>
+
+<%# Parte de código Ruby %>
+<%# Ejemplo de bucle %>
+<% @products.each do |product| %>
+    <%# Declaración de un enlace %>
+    <%= link_to product_path(product), class: 'product' do %>
+        <%# El = lo que hace es imprimir %>
+        <h2><%= product.title %></h2>
+        <span><%= product.price %>$</span>
+    <% end %>
+<% end %>
